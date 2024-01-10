@@ -31,7 +31,7 @@
                 "-lsodium"
             ],
             "cflags_cc": [
-                "-std=c++20",
+                "-std=c++17",
                 "-Wl,--whole-archive",
                 "-fPIC",
                 "-fexceptions",

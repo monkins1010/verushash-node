@@ -69,7 +69,7 @@ NAN_METHOD(hash)
   info.GetReturnValue().Set(Nan::CopyBuffer(output, 32).ToLocalChecked());
 }
 
-NAN_METHOD(hashV2)
+NAN_METHOD(hash2)
 {
   // Check Arguments for Errors
   if (info.Length() < 1)
@@ -91,7 +91,7 @@ NAN_METHOD(hashV2)
   info.GetReturnValue().Set(Nan::CopyBuffer(output, 32).ToLocalChecked());
 }
 
-NAN_METHOD(hashV2b)
+NAN_METHOD(hash2b)
 {
   // Check Arguments for Errors
   if (info.Length() < 1)
@@ -113,7 +113,7 @@ NAN_METHOD(hashV2b)
   info.GetReturnValue().Set(Nan::CopyBuffer(output, 32).ToLocalChecked());
 }
 
-NAN_METHOD(hashV2b1)
+NAN_METHOD(hash2b1)
 {
   // Check Arguments for Errors
   if (info.Length() < 1)
@@ -158,7 +158,7 @@ uint256 blake2b_hash(unsigned char *data, unsigned long long length)
   return result;
 }
 
-NAN_METHOD(hashV2b2)
+NAN_METHOD(hash2b2)
 {
   // Check Arguments for Errors
   if (info.Length() < 1)
@@ -258,10 +258,10 @@ NAN_METHOD(hashV2b2)
 NAN_MODULE_INIT(init)
 {
   Nan::Set(target, Nan::New("hash").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hash)).ToLocalChecked());
-  Nan::Set(target, Nan::New("hashV2").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hashV2)).ToLocalChecked());
-  Nan::Set(target, Nan::New("hash2b").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hashV2b)).ToLocalChecked());
-  Nan::Set(target, Nan::New("2b1").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hashV2b1)).ToLocalChecked());
-  Nan::Set(target, Nan::New("hash2b2").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hashV2b2)).ToLocalChecked());
+  Nan::Set(target, Nan::New("hash2").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hash2)).ToLocalChecked());
+  Nan::Set(target, Nan::New("hash2b").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hash2b)).ToLocalChecked());
+  Nan::Set(target, Nan::New("hash2b1").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hash2b1)).ToLocalChecked());
+  Nan::Set(target, Nan::New("hash2b2").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(hash2b2)).ToLocalChecked());
 
 }
 
