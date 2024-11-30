@@ -8,9 +8,9 @@
     "main": "verushash",
     "bundleDependencies": true,
     "dependencies": {
-        "bindings": "*",
-        "libsodium": "*",
-        "nan": "*",
-        "node-gyp": "*"
+        "bindings": "1.5.0",
+        "libsodium": "0.7.15",
+        "nan": "^2.3.5",
+        "node-gyp": "3.8.0"
     }
 }
